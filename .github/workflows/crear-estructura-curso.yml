@@ -1,0 +1,91 @@
+name: Crear Estructura de Curso
+
+on:
+  repository_dispatch:
+    types:
+      - create-course
+
+jobs:
+  setup-course:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v2
+
+    - name: Crear Estructura Básica del Curso
+      run: |
+        # Crear el archivo NEW_COURSE.md
+        echo "# Curso de [Título del Curso] 💡" > NEW_COURSE.md
+        echo "" >> NEW_COURSE.md
+        echo "_Descripción breve del curso._" >> NEW_COURSE.md
+        echo "" >> NEW_COURSE.md
+        echo "<details>" >> NEW_COURSE.md
+        echo "<summary>Índice 📋</summary>" >> NEW_COURSE.md
+        echo "" >> NEW_COURSE.md
+        echo "1. [Introducción](#introducción)" >> NEW_COURSE.md
+        echo "2. [Público Objetivo](#público-objetivo)" >> NEW_COURSE.md
+        echo "3. [Unidades del Curso](#unidades-del-curso)" >> NEW_COURSE.md
+        echo "4. [Ejemplos de Código](#ejemplos-de-código)" >> NEW_COURSE.md
+        echo "5. [Actividades Prácticas](#actividades-prácticas)" >> NEW_COURSE.md
+        echo "6. [Próximos Pasos](#próximos-pasos)" >> NEW_COURSE.md
+        echo "" >> NEW_COURSE.md
+        echo "</details>" >> NEW_COURSE.md
+        echo "" >> NEW_COURSE.md
+        echo "<details>" >> NEW_COURSE.md
+        echo "<summary>Introducción 🚀</summary>" >> NEW_COURSE.md
+        echo "" >> NEW_COURSE.md
+        echo "Breve introducción al tema principal del curso." >> NEW_COURSE.md
+        echo "" >> NEW_COURSE.md
+        echo "</details>" >> NEW_COURSE.md
+        echo "" >> NEW_COURSE.md
+        echo "<details>" >> NEW_COURSE.md
+        echo "<summary>Público Objetivo 👥</summary>" >> NEW_COURSE.md
+        echo "" >> NEW_COURSE.md
+        echo "Para quién está diseñado el curso y qué conocimientos previos son útiles." >> NEW_COURSE.md
+        echo "" >> NEW_COURSE.md
+        echo "</details>" >> NEW_COURSE.md
+        echo "" >> NEW_COURSE.md
+        echo "<details>" >> NEW_COURSE.md
+        echo "<summary>Unidades del Curso 📚</summary>" >> NEW_COURSE.md
+        echo "" >> NEW_COURSE.md
+        echo "- [Unidad 1: Título de la Unidad](#unidad-1-título-de-la-unidad)" >> NEW_COURSE.md
+        echo "- [Unidad 2: Título de la Unidad](#unidad-2-título-de-la-unidad)" >> NEW_COURSE.md
+        echo "... ... ..." >> NEW_COURSE.md
+        echo "" >> NEW_COURSE.md
+        echo "</details>" >> NEW_COURSE.md
+        echo "" >> NEW_COURSE.md
+        echo "<details>" >> NEW_COURSE.md
+        echo "<summary>Ejemplos de Código 🎯</summary>" >> NEW_COURSE.md
+        echo "" >> NEW_COURSE.md
+        echo "En el directorio [\`ejemplos\`](ejemplos), encontrarás ejemplos de código relacionados con los conceptos enseñados en cada unidad." >> NEW_COURSE.md
+        echo "" >> NEW_COURSE.md
+        echo "</details>" >> NEW_COURSE.md
+        echo "" >> NEW_COURSE.md
+        echo "<details>" >> NEW_COURSE.md
+        echo "<summary>Actividades Prácticas 🛠️</summary>" >> NEW_COURSE.md
+        echo "" >> NEW_COURSE.md
+        echo "En el directorio [\`trabajos_de_estudiantes\`](trabajos_de_estudiantes), tendrás la oportunidad de realizar tareas y ejercicios prácticos para aplicar lo aprendido." >> NEW_COURSE.md
+        echo "" >> NEW_COURSE.md
+        echo "</details>" >> NEW_COURSE.md
+        echo "" >> NEW_COURSE.md
+        echo "<details>" >> NEW_COURSE.md
+        echo "<summary>Próximos Pasos 🚶</summary>" >> NEW_COURSE.md
+        echo "" >> NEW_COURSE.md
+        echo "Sugerencias sobre cómo los estudiantes pueden continuar su aprendizaje después de completar el curso." >> NEW_COURSE.md
+        echo "" >> NEW_COURSE.md
+        echo "</details>" >> NEW_COURSE.md
+        echo "" >> NEW_COURSE.md
+        echo "---" >> NEW_COURSE.md
+        echo "" >> NEW_COURSE.md
+        echo "&copy; 2023 [Tu Nombre]" >> NEW_COURSE.md
+        
+        # Crear directorios por cada unidad
+        for ((i=1; i<=10; i++)); do
+            mkdir "unidad_$i"
+        done
+        
+        # Añadir y comprometer los cambios
+        git add .
+        git commit -m "Crear estructura básica del curso"
+        git push origin main
