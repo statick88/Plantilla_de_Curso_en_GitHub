@@ -18,11 +18,22 @@ jobs:
         git config user.email "dsaavedra88@gmail.com"
         git config user.name "statick88"
 
-    - name: Copiar Contenido de NEW_COURSE.md a README.md
+    - name: Eliminar README.md
       run: |
-        cat NEW_COURSE.md > README.md
+        git rm -f README.md
+        git rm -f CONTRIBUTING.md
+        git rm -f INSTRUCIONES.md
+        git rm -f LICENSE.md
+        git rm -f .vscode/launch.json
+        git rm -f .github/ISSUE_TEMPLATE/bug_report.md
+        git rm -f estructura.txt
+        git commit -m "Eliminar varios archivos" || true
+
+    - name: Renombrar NEW_COURSE.md a README.md
+      run: |
+        mv NEW_COURSE.md README.md
         git add README.md
-        git commit -m "Reemplazar README.md con contenido de NEW_COURSE.md"
+        git commit -m "Renombrar NEW_COURSE.md a README.md"
 
     - name: Instrucciones
       run: |
@@ -32,4 +43,3 @@ jobs:
         echo "2. Selecciona el flujo de trabajo 'Configuración Inicial del Curso' en el menú de la izquierda."
         echo "3. Haz clic en el botón 'Run workflow' para iniciar el proceso de configuración inicial."
         echo "4. Una vez completado, el contenido de README.md se habrá actualizado con el contenido de NEW_COURSE.md."
-
