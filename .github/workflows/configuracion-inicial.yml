@@ -1,14 +1,14 @@
 name: Configuración Inicial del Curso
 
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["Crear Estructura de Curso"]
+    types:
+      - completed
 
 jobs:
   setup:
     runs-on: ubuntu-latest
-    
     steps:
     - name: Checkout Repo
       uses: actions/checkout@v2
@@ -28,12 +28,3 @@ jobs:
         mv NEW_COURSE.md README.md
         git add README.md
         git commit -m "Renombrar NEW_COURSE.md a README.md"
-
-    - name: Instrucciones
-      run: |
-        echo "¡Listo! El contenido de README.md se ha actualizado con el contenido de NEW_COURSE.md en la rama principal de tu repositorio."
-        echo "Pasos a seguir:"
-        echo "1. Abre la pestaña 'Actions' en tu repositorio."
-        echo "2. Selecciona el flujo de trabajo 'Configuración Inicial del Curso' en el menú de la izquierda."
-        echo "3. Haz clic en el botón 'Run workflow' para iniciar el proceso de configuración inicial."
-        echo "4. Una vez completado, el contenido de README.md se habrá actualizado con el contenido de NEW_COURSE.md."
