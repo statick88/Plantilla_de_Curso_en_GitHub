@@ -15,8 +15,8 @@ jobs:
 
     - name: Crear Estructura Básica del Curso
       run: |
-        # Copiar el contenido de la plantilla del README.md a un nuevo archivo
-        cp README.md NEW_COURSE.md
+        # Copiar el contenido del README.md de la plantilla a NEW_COURSE.md
+        cat README.md > NEW_COURSE.md
         
         # Crear directorios para el curso
         mkdir ejemplos
