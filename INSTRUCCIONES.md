@@ -27,7 +27,7 @@
 <details>
 <summary>3. Agregar tu Propio Contenido</summary>
 
-   - Modifica los nombres de los módulos y agrega el contenido específico de cada uno en el directorio [`modulos`](URL_DEL_DIRECTORIO_MODULOS).
+   - Modifica los nombres de los módulos y agrega el contenido específico de cada uno en el directorio [`modulos`](modulos).
 
 </details>
 
