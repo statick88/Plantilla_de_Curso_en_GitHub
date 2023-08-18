@@ -15,8 +15,12 @@ jobs:
 
     - name: Crear Rama de Edición del Curso
       run: |
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "GitHub Actions"
         git checkout -b creacion-curso
         git push origin creacion-curso
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
     - name: Copiar Plantilla NEW_COURSE.md a la Rama creacion-curso
       run: |
@@ -24,7 +28,19 @@ jobs:
         git checkout main -- NEW_COURSE.md
         git commit -m "Copiar plantilla NEW_COURSE.md a la rama creacion-curso"
         git push origin creacion-curso
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
     - name: Finalizar
-      run: echo "Configuración inicial completada."
+      run: echo "Configuración inicial completada. Sigue los pasos a continuación para personalizar el curso."
 
+      # Instrucciones para el usuario
+      - name: Instrucciones
+        run: |
+          echo "¡Listo! Ahora tu repositorio está configurado y la estructura básica del curso se creará automáticamente en la rama creacion-curso. Puedes personalizar y completar los detalles del curso en el archivo NEW_COURSE.md."
+
+          echo "Pasos a seguir:"
+          echo "1. Abre la pestaña 'Actions' en tu repositorio."
+          echo "2. Selecciona el flujo de trabajo 'Configuración Inicial del Curso' en el menú de la izquierda."
+          echo "3. Haz clic en el botón 'Run workflow' para iniciar el proceso de configuración inicial."
+          echo "4. Una vez completado, la estructura del curso estará en la rama 'creacion-curso'. Puedes personalizar los detalles del curso en el archivo NEW_COURSE.md."
