@@ -1,0 +1,16 @@
+name: Activar Crear Estructura de Curso
+
+on:
+  repository:
+    types: [created]
+
+jobs:
+  activate-create-course:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v2
+
+    - name: Ejecutar Crear Estructura de Curso
+      uses: ./.github/workflows/crear-curso.yml
