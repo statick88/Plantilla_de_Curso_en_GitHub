@@ -1,8 +1,8 @@
 name: Activar Crear Estructura de Curso
 
 on:
-  repository:
-    types: [created]
+  repository_dispatch:
+    types: [create-course]
 
 jobs:
   activate-create-course:
