@@ -13,23 +13,30 @@ jobs:
     - name: Checkout Repo
       uses: actions/checkout@v2
 
-    - name: Configurar Identidad de Git
+    - name: Borrar archivos innecesarios
       run: |
-        git config user.email "dsaavedra88@gmail.com"
-        git config user.name "statick88"
-        
-    - name: Copiar Contenido de NEW_COURSE.md a README.md
+        rm -rf .github/
+        rm -rf .vscode/
+        rm -rf ejemplos/
+        rm -rf modulos/
+        rm -rf trabajos_de_estudiantes/
+        rm -f README.md
+
+    - name: Renombrar NEW_COURSE.md a README.md
       run: |
-        cat NEW_COURSE.md > README.md
-        git add README.md
-        git commit -m "Reemplazar README.md con contenido de NEW_COURSE.md"
+        mv NEW_COURSE.md README.md
+
+    - name: Agregar y comprometer cambios
+      run: |
+        git add .
+        git commit -m "Eliminar archivos innecesarios y renombrar NEW_COURSE.md a README.md"
         git push origin main
 
     - name: Instrucciones
       run: |
-        echo "¡Listo! El contenido de README.md ha sido reemplazado con el contenido de NEW_COURSE.md en la rama principal de tu repositorio."
+        echo "¡Listo! Los archivos innecesarios se han eliminado y NEW_COURSE.md se ha renombrado a README.md en la rama principal de tu repositorio."
         echo "Pasos a seguir:"
         echo "1. Abre la pestaña 'Actions' en tu repositorio."
         echo "2. Selecciona el flujo de trabajo 'Configuración Inicial del Curso' en el menú de la izquierda."
         echo "3. Haz clic en el botón 'Run workflow' para iniciar el proceso de configuración inicial."
-        echo "4. Una vez completado, el contenido de README.md se habrá actualizado con el contenido de NEW_COURSE.md."
+        echo "4. Una vez completado, los archivos innecesarios se habrán eliminado y NEW_COURSE.md se habrá renombrado a README.md."
