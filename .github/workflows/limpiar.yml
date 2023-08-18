@@ -1,12 +1,49 @@
-name: Crear Nuevo Repositorio desde Plantilla
+name: Crear y Limpiar Nuevo Repositorio
 
 on:
+  push:
+    branches:
+      - main
   repository_dispatch:
     types:
       - create-new-repo
 
 jobs:
+  limpiar:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Git
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}  # Usar el token de acceso personal
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+
+    - name: Limpiar archivos y carpetas
+      run: |
+        rm -rf .github/ISSUE_TEMPLATE
+        rm -rf ejemplos
+        rm -rf trabajos_de_estudiantes
+        rm -rf modulos
+        rm CONTRIBUTING.md
+        find . -type f ! -name 'INSTRUCCIONES.md' -delete
+        find . -type d -empty -delete
+
+    - name: Commit changes
+      run: |
+        git add .
+        git diff --quiet --exit-code || git commit -m "Limpiar carpetas y archivos innecesarios"
+        
+    - name: Push changes
+      run: |
+        git push origin main
+
   build:
+    needs: limpiar
     runs-on: ubuntu-latest
 
     steps:
