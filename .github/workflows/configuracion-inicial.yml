@@ -21,15 +21,13 @@ jobs:
         git push origin main
 
     - name: Finalizar
-      run: echo "Configuración inicial completada. Se ha reemplazado el contenido de README.md con el contenido de NEW_COURSE.md."
+      run: |
+        echo "Configuración inicial completada. Se ha reemplazado el contenido de README.md con el contenido de NEW_COURSE.md."
 
-      # Instrucciones para el usuario
-      - name: Instrucciones
-        run: |
-          echo "¡Listo! El contenido de README.md ha sido reemplazado con el contenido de NEW_COURSE.md en la rama principal de tu repositorio."
-
-          echo "Pasos a seguir:"
-          echo "1. Abre la pestaña 'Actions' en tu repositorio."
-          echo "2. Selecciona el flujo de trabajo 'Configuración Inicial del Curso' en el menú de la izquierda."
-          echo "3. Haz clic en el botón 'Run workflow' para iniciar el proceso de configuración inicial."
-          echo "4. Una vez completado, el contenido de README.md se habrá actualizado con el contenido de NEW_COURSE.md."
+        # Instrucciones para el usuario
+        echo "¡Listo! El contenido de README.md ha sido reemplazado con el contenido de NEW_COURSE.md en la rama principal de tu repositorio."
+        echo "Pasos a seguir:"
+        echo "1. Abre la pestaña 'Actions' en tu repositorio."
+        echo "2. Selecciona el flujo de trabajo 'Configuración Inicial del Curso' en el menú de la izquierda."
+        echo "3. Haz clic en el botón 'Run workflow' para iniciar el proceso de configuración inicial."
+        echo "4. Una vez completado, el contenido de README.md se habrá actualizado con el contenido de NEW_COURSE.md."
