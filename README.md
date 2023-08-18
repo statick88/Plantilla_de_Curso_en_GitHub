@@ -84,9 +84,10 @@ El repositorio sigue una estructura de directorios que te ayudará a organizar e
 </details>
 
 <details>
-<summary>Contribuyendo 🤝</summary>
+<summary>Contribución 🤝</summary>
 
-Si deseas contribuir al contenido de este curso, revisa las pautas en [`CONTRIBUTING.md`](CONTRIBUTING.md) para obtener información sobre cómo presentar problemas y enviar solicitudes de extracción.
+¡Gracias por considerar contribuir a este proyecto! Si deseas contribuir, asegúrate de revisar nuestra [Guía de Contribución](./CONTRIBUTING.md) para obtener más detalles sobre cómo puedes participar. Además, si encuentras algún problema o tienes una idea para una nueva característica, consulta nuestra sección sobre [Cómo Reportar Problemas o Solicitar Características](./README.md#how-to-report-issues-or-request-features) para obtener instrucciones sobre cómo proceder.
+
 
 </details>
 
@@ -95,7 +96,7 @@ Si deseas contribuir al contenido de este curso, revisa las pautas en [`CONTRIBU
 
 Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para obtener más detalles.
 
-&copy; Año [Diego Saavedra](https://github.com/statick88)
+&copy; 2023 [Diego Saavedra](https://github.com/statick88)
 
 </details>
 
