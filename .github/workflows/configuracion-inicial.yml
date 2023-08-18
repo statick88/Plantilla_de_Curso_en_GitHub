@@ -20,7 +20,7 @@ jobs:
         
     - name: Copiar Contenido de NEW_COURSE.md a README.md
       run: |
-        cat .github/NEW_COURSE.md > README.md
+        cat NEW_COURSE.md > README.md
         git add README.md
         git commit -m "Reemplazar README.md con contenido de NEW_COURSE.md"
         git push origin main
