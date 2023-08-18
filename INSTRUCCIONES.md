@@ -19,19 +19,17 @@
 
    Una vez creado el nuevo repositorio, puedes comenzar a personalizarlo:
 
-   - Sigue las instrucciones detalladas en el archivo [README.md](URL_DEL_ARCHIVO_README.md) para ajustar la descripción, objetivos, requisitos previos, duración y más.
-   - Explora y ajusta los diferentes directorios: [`ejemplos`](URL_DEL_DIRECTORIO_EJEMPLOS), [`trabajos_de_estudiantes`](URL_DEL_DIRECTORIO_TRABAJOS_DE_ESTUDIANTES) y [`modulos`](URL_DEL_DIRECTORIO_MODULOS), de acuerdo con tus necesidades y contenido.
+   - Sigue las instrucciones detalladas en el archivo [README.md](README.md) para ajustar la descripción, objetivos, requisitos previos, duración y más.
+   - Explora y ajusta los diferentes directorios: [`ejemplos`](ejemplos), [`trabajos_de_estudiantes`](trabajos_de_estudiantes) y [`modulos`](ejemplos), de acuerdo con tus necesidades y contenido.
 
 </details>
 
-<details>
 <details>
 <summary>3. Agregar tu Propio Contenido</summary>
 
    - Modifica los nombres de los módulos y agrega el contenido específico de cada uno en el directorio [`modulos`](URL_DEL_DIRECTORIO_MODULOS).
 
 </details>
-
 
 <details>
 <summary>4. Eliminar Secciones Innecesarias</summary>
