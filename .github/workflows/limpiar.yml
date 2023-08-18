@@ -1,4 +1,4 @@
-name: Limpiar Plantilla de Curso
+name: Limpiar carpetas y archivos innecesarios
 
 on:
   push:
@@ -10,23 +10,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout código
+    - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Limpiar carpetas y archivos innecesarios
-      run: |
-        # Eliminar las carpetas y archivos innecesarios
-        rm -rf ejemplos
-        rm -rf trabajos_de_estudiantes
-        rm -rf .github
-        rm -f CONTRIBUTING.md
-        rm -f LICENSE
-        rm -f README.md
-
-    - name: Commit y Push cambios
+    - name: Set up Git
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}  # Usar el token de acceso personal
       run: |
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
+
+    - name: Limpiar archivos y carpetas
+      run: |
+        # Coloca aquí los comandos para limpiar los archivos y carpetas innecesarios
+        
+    - name: Commit changes
+      run: |
         git add .
         git commit -m "Limpiar carpetas y archivos innecesarios"
-        git push
+        
+    - name: Push changes
+      run: |
+        git push origin main
+
