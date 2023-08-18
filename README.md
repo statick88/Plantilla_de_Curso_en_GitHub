@@ -1,56 +1,102 @@
-# Plantilla de Curso en GitHub 🌟📚👨‍🏫
+<!-- Cambia por el nombre de tu curso -->
+# Curso: Cómo Crear Cursos a través de GitHub 📚 
+<!-- Cambia por el nombre de tu curso -->
 
-¡Bienvenido a la Plantilla de Curso en GitHub! Esta plantilla te ayudará a diseñar, desarrollar y ofrecer cursos educativos en línea utilizando GitHub y sus herramientas. A continuación, encontrarás los directorios y archivos recomendados para organizar tu contenido.
+_Aprende a utilizar GitHub y sus funciones para diseñar, desarrollar y ofrecer cursos educativos de manera efectiva._
 
-## Estructura del Repositorio 📁
+<details>
+<summary>Índice 📋</summary>
 
-- [`ejemplos`](ejemplos/): Este directorio es para almacenar ejemplos y código relacionados con el contenido del curso.
-- [`trabajos_de_estudiantes`](trabajos_de_estudiantes/): 📝 Aquí los estudiantes pueden presentar sus trabajos y ejercicios.
-- [`modulos`](modulos/): 📂 Cada módulo del curso debe tener su propio directorio con el contenido correspondiente.
+1. [Instrucciones para Clonar y Personalizar la Plantilla](#instrucciones-para-clonar-y-personalizar-la-plantilla)
+2. [Distribución de Responsabilidades y Uso de Directorios](#distribución-de-responsabilidades-y-uso-de-directorios)
+3. [Estructura de Directorios](#estructura-de-directorios)
+4. [Empezando](#empezando)
+5. [Contribuyendo](#contribuyendo)
+6. [Licencia](#licencia)
 
-## Cómo Utilizar esta Plantilla 🚀
+</details>
 
-1. **Usa esta plantilla**: Haz clic en el botón "Usar esta plantilla" abajo para crear un nuevo repositorio basado en esta plantilla.
+<details>
+<summary>Instrucciones para Clonar y Personalizar la Plantilla 🚀</summary>
 
-   [![Usar esta plantilla](https://img.shields.io/badge/Usar%20esta%20plantilla-%F0%9F%93%9A%F0%9F%8C%90-green)](https://github.com/tu_usuario/plantilla-de-curso/generate)
+1. Haz clic en el botón "Usar esta plantilla" en la parte superior de esta página para crear un nuevo repositorio basado en esta plantilla.
 
-2. **Personaliza tu repositorio**: Proporciona un nombre para el nuevo repositorio y elige la organización o cuenta en la que deseas crearlo.
+2. Proporciona un nombre para el nuevo repositorio y elige la organización o cuenta en la que deseas crearlo.
 
-3. **Crea tu repositorio**: Haz clic en "Crear repositorio desde la plantilla" para crear el nuevo repositorio basado en la plantilla.
+3. Haz clic en el botón "Crear repositorio desde la plantilla" para crear el nuevo repositorio basado en la plantilla.
 
-4. **Elimina esta sección**: Una vez creado el repositorio, **elimina esta sección** y sigue las instrucciones en la sección "Instrucciones para Clonar y Personalizar la Plantilla" del archivo [INSTRUCCIONES.md](INSTRUCCIONES.md) para personalizar el contenido y configurar el curso.
+4. Una vez creado el nuevo repositorio, puedes seguir las instrucciones en la sección ["INSTRUCCIONES.md"](INSTRUCCIONES.md) del archivo README.md para personalizar el contenido y configurar el curso.
 
-## Instrucciones Detalladas 📝
+</details>
 
-Para obtener instrucciones detalladas sobre cómo clonar y personalizar esta plantilla, consulta el archivo [INSTRUCCIONES.md](INSTRUCCIONES.md).
+<details>
+<summary>Distribución de Responsabilidades y Uso de Directorios 📂</summary>
 
-## Módulos del Curso 📚
+Esta sección describe cómo se pueden utilizar los diferentes directorios en esta plantilla para organizar el contenido y las responsabilidades tanto para el instructor como para los estudiantes.
 
-Cada módulo del curso debe tener su propio directorio bajo el directorio [`modulos`](modulos/). Dentro de cada directorio de módulo, puedes organizar el contenido, los ejemplos, las tareas y los recursos relacionados.
+### Directorio de Ejemplos ([`ejemplos`](ejemplos)) 🧪
 
-## Trabajos de Estudiantes 📝
+- **Para el Instructor**: Utiliza este directorio para almacenar ejemplos de código y recursos relacionados con el contenido del curso. Estos ejemplos pueden ser utilizados en presentaciones y para demostrar conceptos clave.
+- **Para el Estudiante**: Los estudiantes pueden consultar estos ejemplos para comprender mejor cómo aplicar los conceptos enseñados en el curso en situaciones prácticas.
 
-Los estudiantes pueden enviar sus trabajos y ejercicios en el directorio [`trabajos_de_estudiantes`](trabajos_de_estudiantes/). Fomenta la participación y la colaboración entre los estudiantes.
+### Directorio de Trabajos de Estudiantes ([`trabajos_de_estudiantes`](trabajos_de_estudiantes)) 📝
 
-## Ejemplos y Código 💻
+- **Para el Instructor**: Los trabajos de los estudiantes pueden ser presentados y evaluados en este directorio. Puedes revisar y proporcionar retroalimentación a los estudiantes sobre sus tareas y ejercicios.
+- **Para el Estudiante**: Los estudiantes pueden enviar sus trabajos y ejercicios en este directorio siguiendo las instrucciones del curso.
 
-Guarda los ejemplos de código y los recursos en el directorio [`ejemplos`](ejemplos/). Esto puede ayudar a los estudiantes a comprender mejor los conceptos a través de ejemplos prácticos.
+### Directorio de Módulos ([`modulos`](modulos)) 📖
 
-## Contribución 🤝
+- **Para el Instructor**: Crea un directorio para cada módulo del curso bajo este directorio. Organiza el contenido, las lecciones, las tareas y los recursos correspondientes a cada módulo.
+- **Para el Estudiante**: Los estudiantes pueden navegar por los diferentes directorios de módulos para acceder a los materiales de cada lección y comprender la estructura del curso.
 
-Si deseas contribuir a esta plantilla o informar sobre problemas, por favor dirígete a [CONTRIBUTING.md](CONTRIBUTING.md).
+Recuerda eliminar esta sección una vez que hayas comprendido cómo utilizar los directorios de manera efectiva.
 
-## Licencia 📜
+</details>
 
-Este proyecto está bajo la Licencia [MIT](LICENSE).
+<details>
+<summary>Estructura de Directorios 🗂️</summary>
 
----
+El repositorio sigue una estructura de directorios que te ayudará a organizar el contenido del curso de manera efectiva. Aquí está una descripción de los principales directorios y su propósito:
 
-&copy; Año [Tu Nombre] &bull; [Código de Conducta](URL_del_Código_de_Conducta) &bull; [Licencia MIT](LICENSE)
+- 📁 [`ejemplos`](ejemplos): Contiene ejemplos de código y recursos relacionados con el contenido del curso.
 
-  Agrega un enlace para obtener soporte, página de estado de GitHub, código de conducta, enlace de licencia.
--->
+- 📁 [`trabajos_de_estudiantes`](trabajos_de_estudiantes): Aquí los estudiantes pueden enviar sus trabajos y ejercicios siguiendo las instrucciones del curso.
 
----
+- 📁 [`modulos`](modulos): Cada módulo del curso tiene su propio directorio aquí. Organiza el contenido de cada módulo en sus respectivas carpetas.
 
-&copy; Año [Tu Nombre] &bull; [Código de Conducta](URL_del_Código_de_Conducta) &bull; [Licencia CC-BY-4.0](URL_de_la_Licencia)
+- 📄 [`INSTRUCCIONES.md`](INSTRUCCIONES.md): Proporciona instrucciones detalladas sobre cómo clonar la plantilla y configurar el curso.
+
+- 📄 [`CONTRIBUTING.md`](CONTRIBUTING.md): Información sobre cómo contribuir al curso, presentar problemas y enviar solicitudes de extracción.
+
+</details>
+
+<details>
+<summary>Empezando 🚀</summary>
+
+1. Haz clic en el botón "Usar esta plantilla" en la parte superior de esta página para crear un nuevo repositorio basado en esta plantilla.
+
+2. Proporciona un nombre para el nuevo repositorio y elige la organización o cuenta en la que deseas crearlo.
+
+3. Haz clic en el botón "Crear repositorio desde la plantilla" para crear el nuevo repositorio basado en la plantilla.
+
+4. Una vez creado el nuevo repositorio, consulta las instrucciones detalladas en [`INSTRUCCIONES.md`](INSTRUCCIONES.md) para personalizar el contenido y configurar el curso.
+
+</details>
+
+<details>
+<summary>Contribuyendo 🤝</summary>
+
+Si deseas contribuir al contenido de este curso, revisa las pautas en [`CONTRIBUTING.md`](CONTRIBUTING.md) para obtener información sobre cómo presentar problemas y enviar solicitudes de extracción.
+
+</details>
+
+<details>
+<summary>Licencia 📜</summary>
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para obtener más detalles.
+
+&copy; Año [Diego Saavedra](https://github.com/statick88)
+
+</details>
+
+</details>
