@@ -8,47 +8,47 @@
 <details>
 <summary>1. Clonar la Plantilla</summary>
 
-   - Haz clic en el botón "Usar esta plantilla" en la parte superior derecha de la página de la plantilla.
-   - Proporciona un nombre para el nuevo repositorio y elige la organización o cuenta en la que deseas crearlo.
-   - Haz clic en el botón "Crear repositorio desde la plantilla" para crear el nuevo repositorio basado en la plantilla.
+- Haz clic en el botón "Usar esta plantilla" en la parte superior derecha de la página de la plantilla.
+- Proporciona un nombre para el nuevo repositorio y elige la organización o cuenta en la que deseas crearlo.
+- Haz clic en el botón "Crear repositorio desde la plantilla" para crear el nuevo repositorio basado en la plantilla.
 
 </details>
 
 <details>
 <summary>2. Personalizar el Contenido</summary>
 
-   Una vez creado el nuevo repositorio, puedes comenzar a personalizarlo:
+Una vez creado el nuevo repositorio, puedes comenzar a personalizarlo:
 
-   - Sigue las instrucciones detalladas en el archivo [README.md](README.md) para ajustar la descripción, objetivos, requisitos previos, duración y más.
-   - Explora y ajusta los diferentes directorios: [`ejemplos`](ejemplos), [`trabajos_de_estudiantes`](trabajos_de_estudiantes) y [`modulos`](ejemplos), de acuerdo con tus necesidades y contenido.
+- Sigue las instrucciones detalladas en el archivo [README.md](README.md) para ajustar la descripción, objetivos, requisitos previos, duración y más.
+- Explora y ajusta los diferentes directorios: [`ejemplos`](ejemplos), [`trabajos_de_estudiantes`](trabajos_de_estudiantes) y [`módulos`](ejemplos), de acuerdo con tus necesidades y contenido.
 
 </details>
 
 <details>
 <summary>3. Agregar tu Propio Contenido</summary>
 
-   - Modifica los nombres de los módulos y agrega el contenido específico de cada uno en el directorio [`modulos`](modulos).
+- Modifica los nombres de los módulos y agrega el contenido específico de cada uno en el directorio [`módulos`](modulos).
 
 </details>
 
 <details>
 <summary>4. Eliminar Secciones Innecesarias</summary>
 
-   - A medida que personalices el contenido, elimina las secciones que ya no sean relevantes para tu curso.
+- A medida que personalices el contenido, elimina las secciones que ya no sean relevantes para tu curso.
 
 </details>
 
 <details>
 <summary>5. Personalizar el Código de Conducta y Contribución</summary>
 
-   - Si planeas aceptar contribuciones, asegúrate de revisar y personalizar el Código de Conducta y las instrucciones de contribución en el archivo CONTRIBUTING.md.
+- Si planeas aceptar contribuciones, asegúrate de revisar y personalizar el Código de Conducta y las instrucciones de contribución en el archivo CONTRIBUTING.md.
 
 </details>
 
 <details>
 <summary>6. Eliminar esta sección</summary>
 
-   Una vez que hayas completado la personalización y estés listo para lanzar tu curso, siéntete libre de eliminar esta sección.
+Una vez que hayas completado la personalización y estés listo para lanzar tu curso, siéntete libre de eliminar esta sección.
 
 </details>
 
