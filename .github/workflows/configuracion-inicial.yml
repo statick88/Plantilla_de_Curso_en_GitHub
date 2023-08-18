@@ -13,10 +13,6 @@ jobs:
     - name: Checkout Repo
       uses: actions/checkout@v2
 
-    - name: Crear Token de Acceso Personal
-      id: create_token
-      run: echo "TOKEN=$(gh auth login --with-token < /dev/null)" >> $GITHUB_ENV
-      
     - name: Crear Rama de Edición del Curso
       run: |
         git checkout -b creacion-curso
@@ -31,3 +27,4 @@ jobs:
 
     - name: Finalizar
       run: echo "Configuración inicial completada."
+
