@@ -1,0 +1,30 @@
+name: Automatizar Creación y Fusión de Solicitud de Extracción
+
+on:
+  push:
+    branches:
+      - creacion-curso
+
+jobs:
+  create-and-merge-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v2
+
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        branch: main
+        title: "Automatizar Creación de Estructura de Curso"
+        body: |
+          Esta solicitud de extracción automatizada tiene como objetivo:
+          - Crear la estructura básica del curso en la rama 'main'
+          - Ejecutar el flujo de trabajo para la creación de la estructura del curso
+
+          Por favor, revisa y aprueba esta solicitud de extracción.
+
+        labels: automerge
+
