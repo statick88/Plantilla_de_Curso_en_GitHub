@@ -50,16 +50,13 @@ _Aprende a utilizar GitHub y sus funciones para diseñar, desarrollar y ofrecer 
 
 ## ¿Cómo Comenzar el Curso? 🚀
 
-1. Haz clic en el botón "Comenzar Curso" a continuación para crear un nuevo repositorio basado en esta plantilla.
-
-[![Comenzar Curso](https://img.shields.io/badge/Comenzar%20Curso-%F0%9F%8E%93%F0%9F%9A%80-blue)](https://github.com/statick88/Plantilla_de_Curso_en_GitHub/generar)
+1. Haz clic en el botón "Usar esta plantilla" en la parte superior derecha de la página del [repositorio de la Plantilla de Curso en GitHub](https://github.com/statick88/Plantilla_de_Curso_en_GitHub) para crear un nuevo repositorio basado en esta plantilla.
 
 2. Proporciona un nombre para el nuevo repositorio y elige la organización o cuenta en la que deseas crearlo.
 
 3. Haz clic en el botón "Create repository from template" (Crear repositorio desde la plantilla) para crear el nuevo repositorio basado en la plantilla.
 
 4. Una vez creado el nuevo repositorio, **elimina esta sección** y sigue las instrucciones en la sección "Instrucciones para Clonar y Personalizar la Plantilla" del README para personalizar el contenido y configurar el curso.
-
 
 </details>
 
