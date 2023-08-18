@@ -12,6 +12,23 @@
 _Aprende a utilizar GitHub y sus funciones para diseñar, desarrollar y ofrecer cursos educativos de manera efectiva._
 
 <!--
+  <<< Sección: Instrucciones para Clonar y Personalizar la Plantilla >>>
+-->
+
+## Instrucciones para Clonar y Personalizar la Plantilla:
+
+1. Haz clic en el botón "Usar esta plantilla" en la parte superior de esta página para crear un nuevo repositorio basado en esta plantilla.
+
+2. Clona el repositorio recién creado en tu computadora local:
+```bash
+git clone URL_del_Repositorio
+```
+
+# Curso: Cómo Crear Cursos a través de GitHub
+
+_Aprende a utilizar GitHub y sus funciones para diseñar, desarrollar y ofrecer cursos educativos de manera efectiva._
+
+<!--
   <<< Notas del autor: Inicio del curso >>>
   Incluye el botón de inicio, una nota sobre los minutos de Acciones,
   y dile al estudiante por qué debería realizar el curso.
