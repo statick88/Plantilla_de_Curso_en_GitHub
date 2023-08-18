@@ -1,0 +1,43 @@
+name: Crear y Configurar Nuevo Repositorio
+
+on:
+  repository_dispatch:
+    types:
+      - create-new-repo
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v2
+
+    - name: Crea un Nuevo Repositorio
+      run: |
+        git checkout -b new-repo-setup
+        rm -rf .github/ISSUE_TEMPLATE
+        rm -rf ejemplos
+        rm -rf trabajos_de_estudiantes
+        rm -rf modulos
+        rm CONTRIBUTING.md
+        find . -type f ! -name 'INSTRUCCIONES.md' -delete
+        find . -type d -empty -delete
+        git add .
+        git commit -m "Limpiar archivos y carpetas innecesarios"
+        git push origin new-repo-setup
+
+    - name: Create New Repository
+      run: |
+        TOKEN=${{ secrets.GITHUB_TOKEN }}
+        NEW_REPO_NAME="Nuevo-Repositorio"
+        NEW_REPO_DESCRIPTION="Plantilla para crear cursos educativos a través de GitHub"
+        RESPONSE=$(curl -X POST -H "Authorization: token $TOKEN" -d '{"name": "'"$NEW_REPO_NAME"'", "description": "'"$NEW_REPO_DESCRIPTION"'", "private": false, "auto_init": true}' https://api.github.com/user/repos)
+        NEW_REPO_URL=$(echo "$RESPONSE" | jq -r .html_url)
+
+    - name: Update README with New Repo URL
+      run: |
+        sed -i 's#URL_DEL_REPOSITORIO_NUEVO#'"$NEW_REPO_URL"'#g' README.md
+        git add .
+        git commit -m "Actualizar README con URL del nuevo repositorio"
+        git push origin new-repo-setup
