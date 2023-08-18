@@ -21,12 +21,6 @@ jobs:
     - name: Eliminar README.md
       run: |
         git rm -f README.md
-        git rm -f CONTRIBUTING.md
-        git rm -f INSTRUCIONES.md
-        git rm -f LICENSE.md
-        git rm -f .vscode/launch.json
-        git rm -f .github/ISSUE_TEMPLATE/bug_report.md
-        git rm -f estructura.txt
         git commit -m "Eliminar varios archivos" || true
 
     - name: Renombrar NEW_COURSE.md a README.md
