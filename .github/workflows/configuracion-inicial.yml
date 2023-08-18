@@ -1,0 +1,33 @@
+name: Configuración Inicial del Curso
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v2
+
+    - name: Crear Token de Acceso Personal
+      id: create_token
+      run: echo "TOKEN=$(gh auth login --with-token < /dev/null)" >> $GITHUB_ENV
+      
+    - name: Crear Rama de Edición del Curso
+      run: |
+        git checkout -b creacion-curso
+        git push origin creacion-curso
+
+    - name: Copiar Plantilla NEW_COURSE.md a la Rama creacion-curso
+      run: |
+        git checkout creacion-curso
+        git checkout main -- NEW_COURSE.md
+        git commit -m "Copiar plantilla NEW_COURSE.md a la rama creacion-curso"
+        git push origin creacion-curso
+
+    - name: Finalizar
+      run: echo "Configuración inicial completada."
