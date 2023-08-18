@@ -1,0 +1,31 @@
+name: Crear Curso a partir de Plantilla
+
+on:
+  repository_dispatch:
+    types:
+      - create-course
+
+jobs:
+  setup-course:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v2
+
+    - name: Crear Estructura Básica del Curso
+      run: |
+        # Copiar el contenido de la plantilla del README.md a un nuevo archivo
+        cp README.md NEW_COURSE.md
+        
+        # Crear directorios para el curso
+        mkdir ejemplos
+        mkdir trabajos_de_estudiantes
+        
+        # Crear el archivo INSTRUCCIONES.md
+        echo "Instrucciones para personalizar el contenido del curso" > INSTRUCCIONES.md
+        
+        # Añadir y comprometer los cambios
+        git add .
+        git commit -m "Crear estructura básica del curso"
+        git push origin main
