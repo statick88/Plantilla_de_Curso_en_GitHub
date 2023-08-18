@@ -1,0 +1,28 @@
+name: Create New Repo Dispatch
+
+on:
+  workflow_run:
+    workflows: ["Limpiar carpetas y archivos innecesarios"]
+    types:
+      - completed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check if previous job succeeded
+      run: |
+        if [ ${{ job.status }} != "success" ]; then
+          echo "Previous job failed"
+          exit 1
+        fi
+
+    - name: Create Dispatch
+      run: |
+        echo "{\"event_type\": \"create-new-repo\"}" > event.json
+        curl -X POST \
+          -H "Authorization: Bearer ${{ secrets.PERSONAL_ACCESS_TOKEN }}" \
+          -H "Accept: application/vnd.github.everest-preview+json" \
+          -d @event.json \
+          https://api.github.com/repos/$GITHUB_REPOSITORY/dispatches
