@@ -1,0 +1,10 @@
+Listado de rutas de carpetas
+El n·mero de serie del volumen es 2807-D777
+C:.
++---.github
+ª   +---ISSUE_TEMPLATE
+ª   +---workflows
++---.vscode
++---ejemplos
++---modulos
++---trabajos_de_estudiantes
